@@ -68,26 +68,15 @@ st.write('**Temperature for today:**', Value['daily']['temperature_2m_max'])
 st.write(Value['hourly']['precipitation_probability'])
 st.line_chart(data= Value['hourly']['precipitation_probability'], width=1000, height=400, color=["#fd0"], x_label='N/A', y_label='%')
 st.write("Today's rainfall:", Value['hourly']['rain'])
-st.line_chart(data=Value['hourly']['rain'][0:100], color=['#ff00'], width=1000, height=400)
+st.link_button("<<< Click For More Info >>>", 'https://r.mtdv.me/articles/current-weather-info')
+button = st.button("Show")
+show = True
+if button and show:
+    show = True
+    st.line_chart(data=Value['hourly']['rain'][0:100], color=['#ff00'], width=1000, height=400)
+else:
+    show = False
+
+    
+
 st.progress(1.0)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
